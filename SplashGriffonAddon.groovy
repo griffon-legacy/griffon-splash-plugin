@@ -38,7 +38,7 @@ class SplashGriffonAddon {
 
     def events = [
         ReadyEnd: { app ->
-            app.execAsync {
+            app.execInsideUIAsync {
                 SplashScreen.instance.dispose() 
             }
         }
