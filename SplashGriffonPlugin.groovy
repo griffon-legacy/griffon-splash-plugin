@@ -19,11 +19,11 @@
  */
 class SplashGriffonPlugin {
     // the plugin version
-    String version = '0.4'
+    String version = '1.0.0'
     // the version or versions of Griffon the plugin is designed for
-    String griffonVersion = '0.9.5 > *'
+    String griffonVersion = '1.0.0 > *'
     // the other plugins this plugin depends on
-    Map dependsOn = [swing: '0.9.5']
+    Map dependsOn = [swing: '1.0.0']
     // resources that are included in plugin packaging
     List pluginIncludes = []
     // the plugin license
@@ -61,7 +61,7 @@ Usage
 
 The splash screen can be displayed by calling
 
-        SplashGriffonAddon.display(app) 
+        SplashGriffonAddon.display(app)
 
 This code is usually placed inside `griffon-app/lifecycle/Initialize.groovy` as that's the lifecycle script that will be called
 first when the application startups.
@@ -79,4 +79,3 @@ Updating the status text can be done at anytime while the Splash screen is shown
     griffon.plugins.splash.SplashScreen.instance.showStatus("Initializing the Controller")
 '''
 }
-
